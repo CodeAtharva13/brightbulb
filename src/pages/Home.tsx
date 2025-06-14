@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { useEffect } from "react";
@@ -16,10 +15,10 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Auto-scrolling Carousel Section */}
-      <div className="relative min-h-[80vh] flex items-center justify-center">
+      <div className="relative min-h-[80vh] flex items-center justify-center z-10">
         <Carousel 
           ref={emblaRef} 
-          className="w-full max-w-full"
+          className="w-full max-w-full relative z-20"
           opts={{
             align: "start",
             loop: true,
@@ -63,7 +62,7 @@ const Home = () => {
       </div>
 
       {/* BINGO Section with Text */}
-      <div className="py-16 bg-white">
+      <div className="py-16 bg-white relative z-0">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
             Not Your Typical <span className="text-red-600">BINGO!</span>
@@ -82,7 +81,7 @@ const Home = () => {
       </div>
 
       {/* Third Image Section - Clickable */}
-      <div className="bg-gray-100 cursor-pointer hover:opacity-95 transition-opacity" onClick={() => console.log('Know More clicked')}>
+      <div className="bg-gray-100 cursor-pointer hover:opacity-95 transition-opacity relative z-0" onClick={() => console.log('Know More clicked')}>
         <img 
           src="/lovable-uploads/1e6cc659-9907-4c87-a8dd-88516b12a1cb.png" 
           alt="Cross Out Boring Parties - Know More" 
