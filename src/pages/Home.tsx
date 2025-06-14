@@ -36,7 +36,7 @@ const Home = () => {
                 <img 
                   src="/lovable-uploads/c3718adf-d182-40f7-ab60-523af46fb0e1.png" 
                   alt="Cross-Punched Out Now! - Game boxes display" 
-                  className="w-full h-full object-cover"
+                  className="max-w-full max-h-full object-contain"
                 />
               </div>
             </CarouselItem>
@@ -45,7 +45,7 @@ const Home = () => {
                 <img 
                   src="/lovable-uploads/9bf8fb40-5c4c-412e-a774-7422b4fc3ed5.png" 
                   alt="Catch Up with Punched-Up!" 
-                  className="w-full h-full object-cover"
+                  className="max-w-full max-h-full object-contain"
                 />
               </div>
             </CarouselItem>
@@ -54,7 +54,7 @@ const Home = () => {
                 <img 
                   src="/lovable-uploads/484941f8-16e0-41b8-bf19-bfe3b392d3c9.png" 
                   alt="Spark-Flame-Blaze Out Now!" 
-                  className="w-full h-full object-cover"
+                  className="max-w-full max-h-full object-contain"
                 />
               </div>
             </CarouselItem>
