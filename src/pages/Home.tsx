@@ -32,6 +32,17 @@ const Home = () => {
         </div>
       </div>
 
+      {/* New Third Image Section */}
+      <div className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4 text-center">
+          <img 
+            src="/lovable-uploads/1e6cc659-9907-4c87-a8dd-88516b12a1cb.png" 
+            alt="Cross Out Boring Parties - Know More" 
+            className="max-w-full h-auto mx-auto"
+          />
+        </div>
+      </div>
+
       {/* Back to Top Button */}
       <button className="fixed bottom-8 right-8 w-12 h-12 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center text-white transition-colors">
         <span className="text-xl">↑</span>
