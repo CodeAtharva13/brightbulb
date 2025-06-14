@@ -12,11 +12,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
-              <div className="w-8 h-8 border-2 border-gray-800 rounded-full flex items-center justify-center">
-                <div className="w-2 h-2 bg-gray-800 rounded-full"></div>
-              </div>
-            </div>
+            <img 
+              src="/lovable-uploads/f53e8206-f7e6-46b1-b1f4-c0de66007464.png" 
+              alt="bright bulb labs logo" 
+              className="h-12 w-auto"
+            />
             <span className="text-xl font-semibold text-foreground">bright bulb labs</span>
           </div>
 
