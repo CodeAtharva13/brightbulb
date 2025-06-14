@@ -1,4 +1,3 @@
-
 const About = () => {
   const teamImages = [
     "/lovable-uploads/e7270a84-1e9c-4678-b9a5-d78c2706f9c1.png",
@@ -83,6 +82,27 @@ const About = () => {
                   </div>
                 </div>
                 <p className="text-sm text-gray-600 mt-2 text-center">Video placeholder - you can add your video here later</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Our Recent Collaborators Section */}
+          <div className="mt-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12" style={{ color: '#E91E63' }}>
+              Our Recent Collaborators
+            </h2>
+            <div className="flex justify-center items-center gap-16 flex-wrap">
+              <div className="transform hover:scale-110 transition-transform duration-300">
+                <img
+                  src="/lovable-uploads/cbd88509-c966-4b14-93b1-c2c8f65e5871.png"
+                  alt="H❤H Collaborator Logo"
+                  className="h-20 w-auto object-contain"
+                />
+              </div>
+              <div className="transform hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-orange-400 via-blue-500 to-teal-400 flex items-center justify-center shadow-lg">
+                  <span className="text-white font-bold text-2xl">ॐ</span>
+                </div>
               </div>
             </div>
           </div>
