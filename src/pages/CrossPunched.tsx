@@ -286,6 +286,15 @@ const CrossPunched = () => {
           </div>
         </div>
       </div>
+
+      {/* Rules Explained Section */}
+      <div className="w-full">
+        <img 
+          src="/lovable-uploads/a74b72e6-bb80-45bb-af3b-c73ce32fd7fc.png" 
+          alt="Rules Explained - Game Rules and Instructions" 
+          className="w-full h-auto block"
+        />
+      </div>
     </div>
   );
 };
