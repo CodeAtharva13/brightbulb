@@ -33,14 +33,12 @@ const Home = () => {
       </div>
 
       {/* New Third Image Section */}
-      <div className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4 text-center">
-          <img 
-            src="/lovable-uploads/1e6cc659-9907-4c87-a8dd-88516b12a1cb.png" 
-            alt="Cross Out Boring Parties - Know More" 
-            className="max-w-full h-auto mx-auto"
-          />
-        </div>
+      <div className="bg-gray-100">
+        <img 
+          src="/lovable-uploads/1e6cc659-9907-4c87-a8dd-88516b12a1cb.png" 
+          alt="Cross Out Boring Parties - Know More" 
+          className="w-full h-auto block"
+        />
       </div>
 
       {/* Back to Top Button */}
