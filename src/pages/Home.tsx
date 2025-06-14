@@ -22,14 +22,16 @@ const Home = () => {
                 </div>
                 <div>
                   <div className="text-black font-bold text-xl mb-2">cross</div>
-                  <div className="text-red-600 font-bold text-2xl mb-1">punched</div>
+                  <div className="text-red-600 font-bold text-2xl mb-1 relative">
+                    <span className="bg-black text-red-600 px-2 py-1 rounded transform -rotate-3 inline-block">punched</span>
+                  </div>
                   <div className="text-black text-sm font-medium">NOT YOUR</div>
                 </div>
               </div>
             </div>
             
             {/* Green Box */}
-            <div className="w-40 h-56 md:w-48 md:h-64 bg-gradient-to-br from-green-500 to-green-700 rounded-lg relative shadow-lg">
+            <div className="w-40 h-56 md:w-48 md:h-64 bg-gradient-to-br from-green-600 to-green-800 rounded-lg relative shadow-lg">
               <div className="absolute inset-4 flex flex-col justify-between">
                 <div className="flex justify-end">
                   <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
@@ -37,23 +39,27 @@ const Home = () => {
                 </div>
                 <div>
                   <div className="text-white font-bold text-xl mb-2">cross</div>
-                  <div className="text-red-500 font-bold text-2xl mb-1">punched</div>
+                  <div className="text-red-500 font-bold text-2xl mb-1 relative">
+                    <span className="bg-black text-red-500 px-2 py-1 rounded transform -rotate-3 inline-block">punched</span>
+                  </div>
                   <div className="text-white text-sm font-medium">NOT YOUR</div>
                 </div>
               </div>
             </div>
             
             {/* Light Green Box */}
-            <div className="w-40 h-56 md:w-48 md:h-64 bg-gradient-to-br from-green-300 to-green-500 rounded-lg transform rotate-[5deg] relative shadow-lg">
+            <div className="w-40 h-56 md:w-48 md:h-64 bg-gradient-to-br from-green-400 to-green-600 rounded-lg transform rotate-[5deg] relative shadow-lg">
               <div className="absolute inset-4 flex flex-col justify-between">
                 <div className="flex justify-end">
                   <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-yellow-400 rounded-full ml-1"></div>
-                  <div className="text-xs font-medium mt-1">bright<br/>bulb labs</div>
+                  <div className="text-xs font-medium mt-1 text-black">bright<br/>bulb labs</div>
                 </div>
                 <div>
                   <div className="text-black font-bold text-xl mb-2">cross</div>
-                  <div className="text-red-600 font-bold text-2xl mb-1">punched</div>
+                  <div className="text-red-600 font-bold text-2xl mb-1 relative">
+                    <span className="bg-black text-red-600 px-2 py-1 rounded transform -rotate-3 inline-block">punched</span>
+                  </div>
                   <div className="text-black text-sm font-medium">NOT YOUR TYPICAL BINGO</div>
                 </div>
               </div>
@@ -62,7 +68,7 @@ const Home = () => {
           
           {/* Buy Now Button */}
           <Button 
-            className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg font-semibold rounded-lg border-2 border-yellow-400"
+            className="bg-white text-green-700 hover:bg-gray-100 px-8 py-3 text-lg font-semibold rounded-lg border-4 border-yellow-400 mb-8"
           >
             Buy Now
           </Button>
@@ -90,7 +96,7 @@ const Home = () => {
             <div className="text-center">
               <div className="mb-4 h-32 flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/667a5a0f-8b76-4d8d-b304-a0e898a901b3.png" 
+                  src="/lovable-uploads/dec7774d-d99c-40ea-8f6a-4ddfec7cc484.png" 
                   alt="Think illustration" 
                   className="w-full h-full object-contain"
                 />
@@ -136,7 +142,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-70"
           style={{
-            backgroundImage: `url('/lovable-uploads/ea74d00e-b2e9-4b32-a00e-b4cccbbee258.png')`
+            backgroundImage: `url('/lovable-uploads/18aa1ccf-7744-46d8-90f7-42dabb0a9ab1.png')`
           }}
         />
         <div className="relative container mx-auto text-center">
