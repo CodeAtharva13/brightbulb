@@ -10,30 +10,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-2 text-sm">
-              <li className="flex items-center gap-2">
-                <img 
-                  src="/lovable-uploads/76e13aa2-6e74-4f74-92d9-b639deef6a19.png" 
-                  alt="Instagram" 
-                  className="w-6 h-6 object-contain"
-                />
-                <span>brightbulblabs.in</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <img 
-                  src="/lovable-uploads/e605f6de-a080-4cd7-919a-6656e0f7416e.png" 
-                  alt="LinkedIn" 
-                  className="w-6 h-6 object-contain"
-                />
-                <span>LinkedIn</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <img 
-                  src="/lovable-uploads/deabca3d-10af-448e-92ea-c600288e85e0.png" 
-                  alt="WhatsApp" 
-                  className="w-6 h-6 object-contain"
-                />
-                <span>WhatsApp</span>
-              </li>
+              <li>Website - brightbulblabs.in</li>
               <li>Email ID - chaitrasworkid@gmail.com</li>
               <li>Address - BrightBulbLabs, Shukrawar Peth, Pune.</li>
             </ul>
