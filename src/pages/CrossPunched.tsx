@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ReviewsSection from "@/components/ReviewsSection";
@@ -8,6 +7,7 @@ const CrossPunched = () => {
   const navigate = useNavigate();
   const [showText, setShowText] = useState(false);
   const [showBottomsUpText, setShowBottomsUpText] = useState(false);
+  const [showDecodeText, setShowDecodeText] = useState(false);
 
   const handleImageClick = () => {
     // You can change this URL to wherever you want to redirect
@@ -26,6 +26,10 @@ const CrossPunched = () => {
 
   const handleBottomsUpImageClick = () => {
     setShowBottomsUpText(!showBottomsUpText);
+  };
+
+  const handleDecodeImageClick = () => {
+    setShowDecodeText(!showDecodeText);
   };
 
   return (
@@ -229,6 +233,50 @@ const CrossPunched = () => {
             }`}>
               <Button 
                 onClick={handleBottomsUpImageClick}
+                variant="outline"
+                className="bg-white/20 border-white/30 text-white hover:bg-white/30 hover:border-white/40"
+              >
+                Close
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Gap between Bottom's Up and Decode sections */}
+      <div className="py-8"></div>
+
+      {/* Decode image section with text overlay */}
+      <div className="w-full relative">
+        <img 
+          src="/lovable-uploads/837670a3-bd2f-465b-9096-1044f6e8749e.png" 
+          alt="DECODE! - Educational Quiz Game" 
+          className="w-full h-auto block cursor-pointer hover:opacity-95 transition-opacity"
+          onClick={handleDecodeImageClick}
+        />
+        
+        {/* Animated text overlay for Decode */}
+        <div className={`absolute inset-0 bg-black/80 flex items-center justify-center transition-all duration-500 ${
+          showDecodeText ? 'opacity-100 visible' : 'opacity-0 invisible'
+        }`}>
+          <div className={`text-white text-center px-8 py-12 max-w-4xl mx-auto transform transition-all duration-700 ${
+            showDecodeText ? 'translate-y-0 scale-100' : 'translate-y-8 scale-95'
+          }`}>
+            <h3 className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-6 transition-all duration-700 delay-200 ${
+              showDecodeText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
+              DECODE!
+            </h3>
+            <p className={`text-lg md:text-xl lg:text-2xl leading-relaxed transition-all duration-700 delay-400 ${
+              showDecodeText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
+              Designed for kids 12+, this mode turns learning into a competitive quiz where correct answers lead to victory. Wild cards introduce bonus challenges, rapid-fire rounds, and news-based tasks to keep things exciting.
+            </p>
+            <div className={`mt-8 transition-all duration-700 delay-600 ${
+              showDecodeText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
+              <Button 
+                onClick={handleDecodeImageClick}
                 variant="outline"
                 className="bg-white/20 border-white/30 text-white hover:bg-white/30 hover:border-white/40"
               >
