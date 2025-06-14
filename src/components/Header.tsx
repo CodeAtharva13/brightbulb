@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
@@ -17,7 +16,6 @@ const Header = () => {
               alt="bright bulb labs logo" 
               className="h-12 w-auto"
             />
-            <span className="text-xl font-semibold text-foreground">bright bulb labs</span>
           </div>
 
           {/* Navigation */}
