@@ -1,5 +1,5 @@
-
 import { Button } from "@/components/ui/button";
+import ReviewsSection from "@/components/ReviewsSection";
 
 const Timeline = () => {
   return (
@@ -67,7 +67,7 @@ const Timeline = () => {
       </div>
 
       {/* Additional text below button */}
-      <div className="flex justify-center pb-8">
+      <div className="flex justify-center pb-4">
         <p className="text-gray-600 text-lg">Keep up with our upcoming events!</p>
       </div>
 
@@ -80,6 +80,9 @@ const Timeline = () => {
           style={{ imageRendering: 'crisp-edges' }}
         />
       </div>
+
+      {/* Reviews Section */}
+      <ReviewsSection />
 
       {/* Back to Top Button */}
       <button className="fixed bottom-8 right-8 w-12 h-12 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center text-white transition-colors">
