@@ -146,8 +146,8 @@ const CrossPunched = () => {
       {/* New uploaded image section */}
       <div className="w-full">
         <img 
-          src="/lovable-uploads/c97d43be-33c5-4449-b4e0-2f0917ac641e.png" 
-          alt="PYAAAR TAQRAAR AUR BINGO KA WAR! - More Details" 
+          src="/lovable-uploads/756d9d4a-32ba-4319-8a53-d0d8571613b2.png" 
+          alt="PYAAR, TAQRAAR AUR BINGO KA WAR! - Game Details" 
           className="w-full h-auto block"
         />
       </div>
