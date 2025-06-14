@@ -2,10 +2,12 @@
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
 const Home = () => {
+  const navigate = useNavigate();
   const [emblaRef] = useEmblaCarousel(
     { loop: true },
     [Autoplay({ delay: 3000, stopOnInteraction: false })]
@@ -39,7 +41,7 @@ const Home = () => {
               </div>
             </CarouselItem>
             <CarouselItem>
-              <div className="flex items-center justify-center cursor-pointer hover:opacity-95 transition-opacity" onClick={() => console.log('Punched-Up clicked')}>
+              <div className="flex items-center justify-center cursor-pointer hover:opacity-95 transition-opacity" onClick={() => navigate('/timeline')}>
                 <img 
                   src="/lovable-uploads/9bf8fb40-5c4c-412e-a774-7422b4fc3ed5.png" 
                   alt="Catch Up with Punched-Up!" 
