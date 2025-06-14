@@ -89,6 +89,29 @@ const CrossPunched = () => {
           </div>
         </div>
       </div>
+
+      {/* Video Playback Section */}
+      <div className="bg-white py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">How to Play</h2>
+            <p className="text-lg text-gray-600">Watch the video to learn the game rules</p>
+          </div>
+          
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-100">
+            <div className="aspect-video flex items-center justify-center">
+              <div className="text-center">
+                <div className="w-20 h-20 bg-gray-300 rounded-full flex items-center justify-center mb-4 mx-auto">
+                  <svg className="w-8 h-8 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <p className="text-gray-500 text-lg">Video will be added here</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
