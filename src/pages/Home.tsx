@@ -15,10 +15,10 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Auto-scrolling Carousel Section */}
-      <div className="relative min-h-[80vh] flex items-center justify-center z-10">
+      <div className="relative w-full z-10">
         <Carousel 
           ref={emblaRef} 
-          className="w-full max-w-full relative z-20"
+          className="w-full relative z-20"
           opts={{
             align: "start",
             loop: true,
@@ -31,29 +31,29 @@ const Home = () => {
         >
           <CarouselContent>
             <CarouselItem>
-              <div className="flex items-center justify-center w-full h-[80vh] cursor-pointer hover:opacity-95 transition-opacity" onClick={() => console.log('Cross-Punched Out Now clicked')}>
+              <div className="flex items-center justify-center w-full cursor-pointer hover:opacity-95 transition-opacity" onClick={() => console.log('Cross-Punched Out Now clicked')}>
                 <img 
                   src="/lovable-uploads/c3718adf-d182-40f7-ab60-523af46fb0e1.png" 
                   alt="Cross-Punched Out Now! - Game boxes display" 
-                  className="max-w-full max-h-full object-contain"
+                  className="w-full h-auto block"
                 />
               </div>
             </CarouselItem>
             <CarouselItem>
-              <div className="flex items-center justify-center w-full h-[80vh] cursor-pointer hover:opacity-95 transition-opacity" onClick={() => navigate('/timeline')}>
+              <div className="flex items-center justify-center w-full cursor-pointer hover:opacity-95 transition-opacity" onClick={() => navigate('/timeline')}>
                 <img 
                   src="/lovable-uploads/9bf8fb40-5c4c-412e-a774-7422b4fc3ed5.png" 
                   alt="Catch Up with Punched-Up!" 
-                  className="max-w-full max-h-full object-contain"
+                  className="w-full h-auto block"
                 />
               </div>
             </CarouselItem>
             <CarouselItem>
-              <div className="flex items-center justify-center w-full h-[80vh] cursor-pointer hover:opacity-95 transition-opacity" onClick={() => navigate('/cross-punched')}>
+              <div className="flex items-center justify-center w-full cursor-pointer hover:opacity-95 transition-opacity" onClick={() => navigate('/cross-punched')}>
                 <img 
                   src="/lovable-uploads/484941f8-16e0-41b8-bf19-bfe3b392d3c9.png" 
                   alt="Spark-Flame-Blaze Out Now!" 
-                  className="max-w-full max-h-full object-contain"
+                  className="w-full h-auto block"
                 />
               </div>
             </CarouselItem>
