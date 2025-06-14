@@ -29,29 +29,31 @@ const CrossPunched = () => {
         />
       </div>
 
-      {/* Additional game examples */}
-      <div className="w-full">
-        <img 
-          src="/lovable-uploads/42ee9122-0758-4dbf-b0f1-43f9a016daea.png" 
-          alt="Cross-Punched game example with Nike card" 
-          className="w-full h-auto block"
-        />
-      </div>
+      {/* Grid layout for game examples */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+        <div className="w-full">
+          <img 
+            src="/lovable-uploads/42ee9122-0758-4dbf-b0f1-43f9a016daea.png" 
+            alt="Cross-Punched game example with Nike card" 
+            className="w-full h-auto block rounded-lg shadow-md"
+          />
+        </div>
 
-      <div className="w-full">
-        <img 
-          src="/lovable-uploads/c1acdaf2-c2f8-43d6-81a9-b87b8936f12b.png" 
-          alt="Cross-Punched game examples with multiple cards" 
-          className="w-full h-auto block"
-        />
-      </div>
+        <div className="w-full">
+          <img 
+            src="/lovable-uploads/c1acdaf2-c2f8-43d6-81a9-b87b8936f12b.png" 
+            alt="Cross-Punched game examples with multiple cards" 
+            className="w-full h-auto block rounded-lg shadow-md"
+          />
+        </div>
 
-      <div className="w-full">
-        <img 
-          src="/lovable-uploads/1752119e-c2c6-4ec0-b6dd-8dffa8837349.png" 
-          alt="Cross-Punched completed game board" 
-          className="w-full h-auto block"
-        />
+        <div className="w-full">
+          <img 
+            src="/lovable-uploads/1752119e-c2c6-4ec0-b6dd-8dffa8837349.png" 
+            alt="Cross-Punched completed game board" 
+            className="w-full h-auto block rounded-lg shadow-md"
+          />
+        </div>
       </div>
     </div>
   );
