@@ -31,28 +31,46 @@ const CrossPunched = () => {
 
       {/* Grid layout for game examples */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        <div className="w-full overflow-hidden">
+        <div className="w-full overflow-hidden relative group">
           <img 
             src="/lovable-uploads/42ee9122-0758-4dbf-b0f1-43f9a016daea.png" 
             alt="Cross-Punched game example with Nike card" 
             className="w-full h-auto block transition-transform duration-300 hover:scale-110"
           />
+          <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div className="text-white text-center p-4">
+              <h3 className="text-2xl font-bold mb-2">CROSS</h3>
+              <p className="text-sm">Nike Brand Challenge</p>
+            </div>
+          </div>
         </div>
 
-        <div className="w-full overflow-hidden">
+        <div className="w-full overflow-hidden relative group">
           <img 
             src="/lovable-uploads/c1acdaf2-c2f8-43d6-81a9-b87b8936f12b.png" 
             alt="Cross-Punched game examples with multiple cards" 
             className="w-full h-auto block transition-transform duration-300 hover:scale-110"
           />
+          <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div className="text-white text-center p-4">
+              <h3 className="text-2xl font-bold mb-2">PUNCHED</h3>
+              <p className="text-sm">Multiple Game Cards</p>
+            </div>
+          </div>
         </div>
 
-        <div className="w-full overflow-hidden">
+        <div className="w-full overflow-hidden relative group">
           <img 
             src="/lovable-uploads/1752119e-c2c6-4ec0-b6dd-8dffa8837349.png" 
             alt="Cross-Punched completed game board" 
             className="w-full h-auto block transition-transform duration-300 hover:scale-110"
           />
+          <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div className="text-white text-center p-4">
+              <h3 className="text-2xl font-bold mb-2">CROSS-PUNCHED</h3>
+              <p className="text-sm">Completed Game Board</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
