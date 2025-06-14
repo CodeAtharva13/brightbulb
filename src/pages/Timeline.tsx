@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 
 const Timeline = () => {
   return (
@@ -53,6 +54,16 @@ const Timeline = () => {
             className="w-full h-auto block transition-transform duration-300 hover:scale-105"
           />
         </div>
+      </div>
+
+      {/* Subscribe Now Button */}
+      <div className="flex justify-center py-12">
+        <Button 
+          className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+          size="lg"
+        >
+          Subscribe Now
+        </Button>
       </div>
 
       {/* Back to Top Button */}
