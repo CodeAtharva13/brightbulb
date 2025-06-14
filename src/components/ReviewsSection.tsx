@@ -96,12 +96,8 @@ const ReviewsSection = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-purple-50 to-pink-50 py-16">
+    <div className="bg-gradient-to-r from-purple-50 to-pink-50 py-8">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
-          What Our Visitors Say
-        </h2>
-        
         <div className="flex justify-center">
           <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl transition-all duration-500 ease-in-out ${
             isAnimating ? 'opacity-70 transform scale-95' : 'opacity-100 transform scale-100'
