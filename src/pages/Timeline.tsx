@@ -87,7 +87,7 @@ const Timeline = () => {
       <ReviewsSection />
 
       {/* Write a review section */}
-      <div className="bg-white py-12">
+      <div className="bg-gradient-to-r from-purple-50 to-pink-50 py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <div className="flex items-center justify-between border-b-2 border-gray-800 pb-4">
