@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 
 const Timeline = () => {
@@ -64,6 +65,11 @@ const Timeline = () => {
         >
           Subscribe Now
         </Button>
+      </div>
+
+      {/* Additional text below button */}
+      <div className="flex justify-center pb-8">
+        <p className="text-gray-600 text-lg">Keep up with our upcoming events!</p>
       </div>
 
       {/* Back to Top Button */}
