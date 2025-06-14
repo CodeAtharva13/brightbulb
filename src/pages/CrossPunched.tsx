@@ -1,6 +1,7 @@
 
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import ReviewsSection from "@/components/ReviewsSection";
 
 const CrossPunched = () => {
   const navigate = useNavigate();
@@ -129,6 +130,16 @@ const CrossPunched = () => {
           >
             Buy Now
           </Button>
+        </div>
+      </div>
+
+      {/* Customer Reviews Section */}
+      <div className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-blue-600 mb-4">What our Customers Think.....</h2>
+          </div>
+          <ReviewsSection />
         </div>
       </div>
 

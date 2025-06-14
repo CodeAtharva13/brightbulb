@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import WriteReviewSection from './WriteReviewSection';
 
 const ReviewsSection = () => {
   const reviews = [
@@ -7,42 +8,42 @@ const ReviewsSection = () => {
       id: 1,
       name: "Sarah Johnson",
       rating: 5,
-      text: "Amazing event! The comedy was top-notch and the atmosphere was electric. Can't wait for the next one!",
+      text: "Amazing game! Cross-Punched is so much more fun than regular BINGO. The trivia questions are challenging and entertaining!",
       avatar: "SJ"
     },
     {
       id: 2,
       name: "Mike Chen",
       rating: 5,
-      text: "Punched Up! delivered beyond expectations. Great laughs, wonderful crowd, and fantastic organization.",
+      text: "Bought this for family game night and it was a huge hit! Everyone from kids to grandparents had a blast.",
       avatar: "MC"
     },
     {
       id: 3,
       name: "Emma Rodriguez",
       rating: 5,
-      text: "The best comedy night in town! Professional comedians and such a fun venue. Highly recommend!",
+      text: "Perfect for parties! The cross-punched format adds such a unique twist. Highly recommend!",
       avatar: "ER"
     },
     {
       id: 4,
       name: "David Thompson",
       rating: 5,
-      text: "Incredible experience! The energy was contagious and the comedy was absolutely hilarious.",
+      text: "Incredible game design! The combination of BINGO and trivia is genius. Can't wait to play again!",
       avatar: "DT"
     },
     {
       id: 5,
       name: "Lisa Park",
       rating: 5,
-      text: "Perfect night out! Great comedy, amazing crowd, and the venue was fantastic. Will definitely be back!",
+      text: "Best purchase I've made in a while! Hours of entertainment and learning rolled into one game.",
       avatar: "LP"
     },
     {
       id: 6,
       name: "James Wilson",
       rating: 5,
-      text: "Outstanding event! The comedians were brilliant and the whole experience was unforgettable.",
+      text: "Outstanding quality and so much fun! The trivia questions are well-researched and engaging.",
       avatar: "JW"
     }
   ];
@@ -96,7 +97,7 @@ const ReviewsSection = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-purple-50 to-pink-50 py-8">
+    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 py-8 rounded-2xl">
       <div className="container mx-auto px-4">
         <div className="flex justify-center">
           <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl transition-all duration-500 ease-in-out ${
@@ -106,11 +107,11 @@ const ReviewsSection = () => {
               <div
                 key={`${review.id}-${currentIndex}-${index}`}
                 className={`bg-white rounded-xl shadow-lg p-6 transform transition-all duration-700 ease-out ${
-                  index === 1 ? 'scale-105 shadow-xl border-2 border-pink-200' : 'hover:scale-102'
+                  index === 1 ? 'scale-105 shadow-xl border-2 border-blue-200' : 'hover:scale-102'
                 } ${isAnimating ? 'translate-y-2' : 'translate-y-0'}`}
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full flex items-center justify-center text-white font-semibold mr-4">
                     {review.avatar}
                   </div>
                   <div>
@@ -133,7 +134,7 @@ const ReviewsSection = () => {
               key={index}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
                 index >= currentIndex && index < currentIndex + 3
-                  ? 'bg-pink-500'
+                  ? 'bg-blue-500'
                   : 'bg-gray-300'
               }`}
             />
@@ -143,15 +144,18 @@ const ReviewsSection = () => {
         {/* Direction indicator */}
         <div className="flex justify-center mt-4">
           <div className="flex items-center space-x-2 text-sm text-gray-500">
-            <span className={`transition-all duration-300 ${direction === 1 ? 'text-pink-500' : ''}`}>
+            <span className={`transition-all duration-300 ${direction === 1 ? 'text-blue-500' : ''}`}>
               →
             </span>
             <span>Auto-scrolling</span>
-            <span className={`transition-all duration-300 ${direction === -1 ? 'text-pink-500' : ''}`}>
+            <span className={`transition-all duration-300 ${direction === -1 ? 'text-blue-500' : ''}`}>
               ←
             </span>
           </div>
         </div>
+
+        {/* Write a Review Section */}
+        <WriteReviewSection />
       </div>
     </div>
   );
