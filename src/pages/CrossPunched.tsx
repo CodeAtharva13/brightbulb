@@ -11,7 +11,7 @@ const CrossPunched = () => {
   };
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen">
       {/* Clickable Background Image */}
       <img 
         src="/lovable-uploads/be1e48ef-1d1b-4898-be79-7036ea686a8b.png" 
@@ -19,6 +19,15 @@ const CrossPunched = () => {
         className="w-full h-full object-cover cursor-pointer hover:opacity-95 transition-opacity"
         onClick={handleImageClick}
       />
+      
+      {/* New section below */}
+      <div className="w-full">
+        <img 
+          src="/lovable-uploads/3c8bf824-f9cd-4b61-8a28-afc0214e32a4.png" 
+          alt="What is Cross-Punched? - Game description" 
+          className="w-full h-auto block"
+        />
+      </div>
     </div>
   );
 };
