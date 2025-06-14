@@ -1,5 +1,6 @@
 
 import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const CrossPunched = () => {
   const navigate = useNavigate();
@@ -8,6 +9,11 @@ const CrossPunched = () => {
     // You can change this URL to wherever you want to redirect
     window.open('https://example.com', '_blank');
     // Or use navigate('/some-route') for internal routing
+  };
+
+  const handleBuyNow = () => {
+    // Add your purchase logic here
+    console.log('Buy Now clicked');
   };
 
   return (
@@ -110,6 +116,21 @@ const CrossPunched = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Buy Now Section */}
+      <div className="bg-gray-50 py-12 px-4">
+        <div className="max-w-2xl mx-auto text-center">
+          <h3 className="text-2xl font-bold text-gray-800 mb-4">Ready to Play?</h3>
+          <p className="text-gray-600 mb-8">Get your Cross-Punched game today and start the fun!</p>
+          <Button 
+            onClick={handleBuyNow}
+            size="lg"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold"
+          >
+            Buy Now
+          </Button>
         </div>
       </div>
     </div>
