@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 
 const Timeline = () => {
@@ -68,6 +69,16 @@ const Timeline = () => {
       {/* Additional text below button */}
       <div className="flex justify-center pb-8">
         <p className="text-gray-600 text-lg">Keep up with our upcoming events!</p>
+      </div>
+
+      {/* Hear it from our visitors image */}
+      <div className="w-full">
+        <img 
+          src="/lovable-uploads/d971a5fd-73cf-439a-a203-37e56666b9fd.png" 
+          alt="Hear it from our visitors" 
+          className="w-full h-auto block"
+          style={{ imageRendering: 'crisp-edges' }}
+        />
       </div>
 
       {/* Back to Top Button */}
