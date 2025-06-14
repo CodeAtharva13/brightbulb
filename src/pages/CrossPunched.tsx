@@ -151,15 +151,6 @@ const CrossPunched = () => {
           className="w-full h-auto block"
         />
       </div>
-
-      {/* Trivia and Answer Key Image */}
-      <div className="w-full">
-        <img 
-          src="/lovable-uploads/c65b2e0d-9ac5-429b-8cb4-49cd2c482bc9.png" 
-          alt="Cross-Punched Trivia and Answer Key" 
-          className="w-full h-auto block"
-        />
-      </div>
     </div>
   );
 };
