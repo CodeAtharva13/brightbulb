@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import ReviewsSection from "@/components/ReviewsSection";
 import { Pen } from "lucide-react";
@@ -6,13 +5,21 @@ import { Pen } from "lucide-react";
 const Timeline = () => {
   return (
     <div className="min-h-screen bg-white">
-      <div className="w-full">
+      <div className="w-full relative group">
         <img 
           src="/lovable-uploads/47875041-d299-4ff7-896d-b3f70703c97e.png" 
           alt="Bright Bulb Labs Timeline - Light Bulb Moment to Punched Up!" 
           className="w-full h-auto block"
           style={{ imageRendering: 'crisp-edges' }}
         />
+        {/* Hover overlay with custom text */}
+        <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <img 
+            src="/lovable-uploads/1289f6e2-6577-414b-bb73-743f51e6a3e2.png"
+            alt="The idea for Bright Bulb Labs"
+            className="max-w-xs md:max-w-md lg:max-w-lg object-contain"
+          />
+        </div>
       </div>
 
       <div className="w-full">
