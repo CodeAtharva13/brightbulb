@@ -11,7 +11,7 @@ const CrossPunched = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       {/* Clickable Background Image */}
       <img 
         src="/lovable-uploads/be1e48ef-1d1b-4898-be79-7036ea686a8b.png" 
@@ -21,7 +21,7 @@ const CrossPunched = () => {
       />
       
       {/* New section below */}
-      <div className="w-full bg-white">
+      <div className="w-full">
         <img 
           src="/lovable-uploads/3c8bf824-f9cd-4b61-8a28-afc0214e32a4.png" 
           alt="What is Cross-Punched? - Game description" 
@@ -30,7 +30,7 @@ const CrossPunched = () => {
       </div>
 
       {/* Enhanced Grid layout for game examples */}
-      <div className="bg-white py-16 px-4">
+      <div className="bg-gradient-to-b from-gray-50 to-white py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             <div className="group cursor-pointer">
