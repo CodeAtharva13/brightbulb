@@ -86,25 +86,13 @@ const About = () => {
             </div>
           </div>
 
-          {/* Our Recent Collaborators Section */}
+          {/* Collaborators Image */}
           <div className="mt-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12" style={{ color: '#E91E63' }}>
-              Our Recent Collaborators
-            </h2>
-            <div className="flex justify-center items-center gap-16 flex-wrap">
-              <div className="transform hover:scale-110 transition-transform duration-300">
-                <img
-                  src="/lovable-uploads/cbd88509-c966-4b14-93b1-c2c8f65e5871.png"
-                  alt="H❤H Collaborator Logo"
-                  className="h-20 w-auto object-contain"
-                />
-              </div>
-              <div className="transform hover:scale-110 transition-transform duration-300">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-orange-400 via-blue-500 to-teal-400 flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-2xl">ॐ</span>
-                </div>
-              </div>
-            </div>
+            <img
+              src="/lovable-uploads/21347245-6ad1-4583-baeb-027b2e133f49.png"
+              alt="Our Recent Collaborators"
+              className="w-full max-w-4xl mx-auto object-contain"
+            />
           </div>
         </div>
       </div>
