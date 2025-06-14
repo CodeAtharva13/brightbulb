@@ -11,12 +11,12 @@ const CrossPunched = () => {
   };
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen w-full relative overflow-hidden">
       {/* Clickable Background Image */}
       <img 
         src="/lovable-uploads/be1e48ef-1d1b-4898-be79-7036ea686a8b.png" 
         alt="Cross-Punched - Not Your Typical BINGO" 
-        className="w-full h-full object-cover cursor-pointer hover:opacity-95 transition-opacity"
+        className="w-full h-screen object-cover cursor-pointer hover:opacity-95 transition-opacity"
         onClick={handleImageClick}
       />
     </div>
