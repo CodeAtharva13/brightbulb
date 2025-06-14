@@ -1,16 +1,57 @@
 
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 
 const Home = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+
+  useEffect(() => {
+    if (emblaApi) {
+      const autoScroll = setInterval(() => {
+        emblaApi.scrollNext();
+      }, 3000); // Auto scroll every 3 seconds
+
+      return () => clearInterval(autoScroll);
+    }
+  }, [emblaApi]);
+
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* Main Image Section - Clickable */}
-      <div className="relative min-h-[80vh] flex items-center justify-center cursor-pointer hover:opacity-95 transition-opacity" onClick={() => console.log('Buy Now clicked')}>
-        <img 
-          src="/lovable-uploads/f2122894-dbf5-40fc-be08-e4fc8c335189.png" 
-          alt="Cross-Punched Out Now! - Game boxes display" 
-          className="max-w-full max-h-full object-contain"
-        />
+      {/* Auto-scrolling Carousel Section */}
+      <div className="relative min-h-[80vh] flex items-center justify-center">
+        <Carousel ref={emblaRef} className="w-full max-w-6xl">
+          <CarouselContent>
+            <CarouselItem>
+              <div className="flex items-center justify-center cursor-pointer hover:opacity-95 transition-opacity" onClick={() => console.log('Cross-Punched Out Now clicked')}>
+                <img 
+                  src="/lovable-uploads/c3718adf-d182-40f7-ab60-523af46fb0e1.png" 
+                  alt="Cross-Punched Out Now! - Game boxes display" 
+                  className="max-w-full max-h-full object-contain"
+                />
+              </div>
+            </CarouselItem>
+            <CarouselItem>
+              <div className="flex items-center justify-center cursor-pointer hover:opacity-95 transition-opacity" onClick={() => console.log('Punched-Up clicked')}>
+                <img 
+                  src="/lovable-uploads/9bf8fb40-5c4c-412e-a774-7422b4fc3ed5.png" 
+                  alt="Catch Up with Punched-Up!" 
+                  className="max-w-full max-h-full object-contain"
+                />
+              </div>
+            </CarouselItem>
+            <CarouselItem>
+              <div className="flex items-center justify-center cursor-pointer hover:opacity-95 transition-opacity" onClick={() => console.log('Spark-Flame-Blaze clicked')}>
+                <img 
+                  src="/lovable-uploads/484941f8-16e0-41b8-bf19-bfe3b392d3c9.png" 
+                  alt="Spark-Flame-Blaze Out Now!" 
+                  className="max-w-full max-h-full object-contain"
+                />
+              </div>
+            </CarouselItem>
+          </CarouselContent>
+        </Carousel>
       </div>
 
       {/* BINGO Section with Text */}
