@@ -1,5 +1,7 @@
+
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ReviewsSection from "@/components/ReviewsSection";
 import { useState } from "react";
 
@@ -294,6 +296,68 @@ const CrossPunched = () => {
           alt="Rules Explained - Game Rules and Instructions" 
           className="w-full h-auto block"
         />
+      </div>
+
+      {/* FAQ Section */}
+      <div className="bg-gradient-to-b from-blue-50 to-white py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-blue-600 mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-gray-600">Get answers to common questions about Cross-Punched</p>
+          </div>
+          
+          <Accordion type="single" collapsible className="space-y-4">
+            <AccordionItem value="delivery" className="bg-white rounded-lg shadow-md border border-blue-100">
+              <AccordionTrigger className="px-6 py-4 text-left text-lg font-semibold text-blue-700 hover:text-blue-800">
+                How long will it take to deliver my cross punched?
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4 text-gray-700">
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <p className="text-lg">1-2 days within Pune. 2-7 days anywhere within Maharashtra.</p>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="answer-key" className="bg-white rounded-lg shadow-md border border-blue-100">
+              <AccordionTrigger className="px-6 py-4 text-left text-lg font-semibold text-blue-700 hover:text-blue-800">
+                I have lost my answer key. What do I do?
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4 text-gray-700">
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <p className="mb-2">Don't worry! We have an answer key for all the sets right here on our website.</p>
+                  <Button 
+                    variant="outline" 
+                    className="bg-blue-600 text-white hover:bg-blue-700 border-blue-600"
+                  >
+                    Click Here
+                  </Button>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="used-cards" className="bg-white rounded-lg shadow-md border border-blue-100">
+              <AccordionTrigger className="px-6 py-4 text-left text-lg font-semibold text-blue-700 hover:text-blue-800">
+                I have played and used up my bingo cards of one set. What do I do?
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4 text-gray-700">
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <p>You can always buy more bingo cards of the same set. Just slide into our DMs, and you are good to go.</p>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="multiple-modes" className="bg-white rounded-lg shadow-md border border-blue-100">
+              <AccordionTrigger className="px-6 py-4 text-left text-lg font-semibold text-blue-700 hover:text-blue-800">
+                Can I play 2 modes at the same time?
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4 text-gray-700">
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <p>Of course you can! This game is to test your creativity and maximise on your fun. Get ready to take shots with your family, though!</p>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
       </div>
     </div>
   );
