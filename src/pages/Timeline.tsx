@@ -84,11 +84,6 @@ const Timeline = () => {
 
       {/* Reviews Section */}
       <ReviewsSection />
-
-      {/* Back to Top Button */}
-      <button className="fixed bottom-8 right-8 w-12 h-12 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center text-white transition-colors">
-        <span className="text-xl">↑</span>
-      </button>
     </div>
   );
 };
