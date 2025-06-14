@@ -168,7 +168,7 @@ const CrossPunched = () => {
             <h3 className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-6 transition-all duration-700 delay-200 ${
               showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}>
-              The Perfect Mix of Bonding and Fun
+              PYAAR, TAQRAAR AUR BINGO KA WAR!
             </h3>
             <p className={`text-lg md:text-xl lg:text-2xl leading-relaxed transition-all duration-700 delay-400 ${
               showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
