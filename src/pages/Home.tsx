@@ -13,12 +13,20 @@ const Home = () => {
         />
       </div>
 
-      {/* BINGO Section */}
+      {/* BINGO Section with Text */}
       <div className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            Not Your Typical BINGO!
+          </h2>
+          <p className="text-2xl text-gray-600 mb-8">
+            Think. Solve. Evolve.
+          </p>
+          
+          {/* New Illustrations Image */}
           <img 
-            src="/lovable-uploads/41f2f7ed-ecb9-4092-bec4-06cd27687091.png" 
-            alt="Not Your Typical BINGO! - Think. Solve. Evolve." 
+            src="/lovable-uploads/d438b8c0-84b5-4504-9fef-6694ec003261.png" 
+            alt="Think, Solve, Grow, Win - Process illustrations" 
             className="max-w-full h-auto mx-auto"
           />
         </div>
