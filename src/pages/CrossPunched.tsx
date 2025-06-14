@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -122,8 +121,6 @@ const CrossPunched = () => {
       {/* Buy Now Section */}
       <div className="bg-gray-50 py-12 px-4">
         <div className="max-w-2xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">Ready to Play?</h3>
-          <p className="text-gray-600 mb-8">Get your Cross-Punched game today and start the fun!</p>
           <Button 
             onClick={handleBuyNow}
             size="lg"
