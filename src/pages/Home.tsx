@@ -13,6 +13,17 @@ const Home = () => {
         />
       </div>
 
+      {/* BINGO Section */}
+      <div className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <img 
+            src="/lovable-uploads/41f2f7ed-ecb9-4092-bec4-06cd27687091.png" 
+            alt="Not Your Typical BINGO! - Think. Solve. Evolve." 
+            className="max-w-full h-auto mx-auto"
+          />
+        </div>
+      </div>
+
       {/* Back to Top Button */}
       <button className="fixed bottom-8 right-8 w-12 h-12 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center text-white transition-colors">
         <span className="text-xl">↑</span>
