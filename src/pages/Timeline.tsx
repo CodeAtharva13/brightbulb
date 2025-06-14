@@ -20,8 +20,8 @@ const Timeline = () => {
         />
       </div>
 
-      {/* New images with hover zoom effect */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+      {/* New images with hover zoom effect - all in one row */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
         <div className="overflow-hidden rounded-lg">
           <img 
             src="/lovable-uploads/4dbe2002-8be1-40d3-95ba-81c8627666dd.png" 
