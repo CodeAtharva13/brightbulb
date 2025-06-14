@@ -12,15 +12,13 @@ const CrossPunched = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Clickable Background Image with colored background */}
-      <div className="bg-blue-100 p-8">
-        <img 
-          src="/lovable-uploads/be1e48ef-1d1b-4898-be79-7036ea686a8b.png" 
-          alt="Cross-Punched - Not Your Typical BINGO" 
-          className="w-full h-full object-cover cursor-pointer hover:opacity-95 transition-opacity"
-          onClick={handleImageClick}
-        />
-      </div>
+      {/* Clickable Background Image */}
+      <img 
+        src="/lovable-uploads/be1e48ef-1d1b-4898-be79-7036ea686a8b.png" 
+        alt="Cross-Punched - Not Your Typical BINGO" 
+        className="w-full h-full object-cover cursor-pointer hover:opacity-95 transition-opacity"
+        onClick={handleImageClick}
+      />
       
       {/* New section below */}
       <div className="w-full">
