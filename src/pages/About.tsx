@@ -1,3 +1,4 @@
+
 const About = () => {
   const teamImages = [
     "/lovable-uploads/e7270a84-1e9c-4678-b9a5-d78c2706f9c1.png",
@@ -82,29 +83,6 @@ const About = () => {
                   </div>
                 </div>
                 <p className="text-sm text-gray-600 mt-2 text-center">Video placeholder - you can add your video here later</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Collaborators Section */}
-          <div className="mt-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12" style={{ color: '#3B82F6' }}>
-              Our Recent Collaborators
-            </h2>
-            <div className="flex justify-center items-center gap-16 md:gap-24">
-              <div className="transform hover:scale-110 transition-transform duration-300">
-                <img
-                  src="/lovable-uploads/2efff0ce-a985-4695-bf4f-f3678ce6c9cf.png"
-                  alt="H❤H Collaborator"
-                  className="h-20 md:h-24 object-contain"
-                />
-              </div>
-              <div className="transform hover:scale-110 transition-transform duration-300">
-                <img
-                  src="/lovable-uploads/2efff0ce-a985-4695-bf4f-f3678ce6c9cf.png"
-                  alt="Circular Logo Collaborator"
-                  className="h-20 md:h-24 object-contain"
-                />
               </div>
             </div>
           </div>
