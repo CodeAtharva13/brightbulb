@@ -86,13 +86,36 @@ const About = () => {
             </div>
           </div>
 
-          {/* Collaborators Image */}
+          {/* Our Recent Collaborators Section */}
           <div className="mt-20">
-            <img
-              src="/lovable-uploads/21347245-6ad1-4583-baeb-027b2e133f49.png"
-              alt="Our Recent Collaborators"
-              className="w-full max-w-4xl mx-auto object-contain"
-            />
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-gray-800">
+              Our Recent Collaborators
+            </h2>
+            <div className="flex justify-center items-center gap-16 flex-wrap">
+              {/* H❤H Logo */}
+              <div className="transform hover:scale-110 transition-all duration-300 hover:shadow-lg">
+                <div className="bg-white/90 rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow duration-300">
+                  <div className="text-6xl font-bold text-black flex items-center justify-center">
+                    H
+                    <div className="mx-2 relative">
+                      <div className="w-8 h-8 bg-gradient-to-br from-pink-500 to-yellow-400 rounded-full border-2 border-black"></div>
+                      <div className="absolute inset-0 flex items-center justify-center text-white text-sm font-bold">❤</div>
+                    </div>
+                    H
+                  </div>
+                </div>
+              </div>
+              
+              {/* Om Symbol */}
+              <div className="transform hover:scale-110 transition-all duration-300 hover:shadow-lg">
+                <div className="bg-white/90 rounded-full p-6 shadow-md hover:shadow-xl transition-shadow duration-300">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-orange-400 via-blue-500 to-teal-400 flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-300 via-blue-400 to-teal-300 opacity-70"></div>
+                    <span className="relative text-white font-bold text-3xl drop-shadow-lg">ॐ</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
