@@ -65,21 +65,36 @@ const Header = () => {
 
           {/* Social Icons */}
           <div className="flex items-center space-x-4">
-            <a href="#" className="hover:opacity-80 transition-opacity">
+            <a 
+              href="https://instagram.com/brightbulblabs" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:opacity-80 transition-opacity"
+            >
               <img 
                 src="/lovable-uploads/76e13aa2-6e74-4f74-92d9-b639deef6a19.png" 
                 alt="Instagram" 
                 className="w-8 h-8 object-contain"
               />
             </a>
-            <a href="#" className="hover:opacity-80 transition-opacity">
+            <a 
+              href="https://wa.me/1234567890" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:opacity-80 transition-opacity"
+            >
               <img 
                 src="/lovable-uploads/deabca3d-10af-448e-92ea-c600288e85e0.png" 
                 alt="WhatsApp" 
                 className="w-8 h-8 object-contain"
               />
             </a>
-            <a href="#" className="hover:opacity-80 transition-opacity">
+            <a 
+              href="https://linkedin.com/company/brightbulblabs" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:opacity-80 transition-opacity"
+            >
               <img 
                 src="/lovable-uploads/e605f6de-a080-4cd7-919a-6656e0f7416e.png" 
                 alt="LinkedIn" 
