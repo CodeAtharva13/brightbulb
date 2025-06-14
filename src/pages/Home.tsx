@@ -50,7 +50,7 @@ const Home = () => {
               </div>
             </CarouselItem>
             <CarouselItem>
-              <div className="flex items-center justify-center cursor-pointer hover:opacity-95 transition-opacity" onClick={() => console.log('Spark-Flame-Blaze clicked')}>
+              <div className="flex items-center justify-center cursor-pointer hover:opacity-95 transition-opacity" onClick={() => navigate('/cross-punched')}>
                 <img 
                   src="/lovable-uploads/484941f8-16e0-41b8-bf19-bfe3b392d3c9.png" 
                   alt="Spark-Flame-Blaze Out Now!" 
