@@ -1,27 +1,33 @@
 
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 const Home = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-
-  useEffect(() => {
-    if (emblaApi) {
-      const autoScroll = setInterval(() => {
-        emblaApi.scrollNext();
-      }, 3000); // Auto scroll every 3 seconds
-
-      return () => clearInterval(autoScroll);
-    }
-  }, [emblaApi]);
+  const [emblaRef] = useEmblaCarousel(
+    { loop: true },
+    [Autoplay({ delay: 3000, stopOnInteraction: false })]
+  );
 
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Auto-scrolling Carousel Section */}
       <div className="relative min-h-[80vh] flex items-center justify-center">
-        <Carousel ref={emblaRef} className="w-full max-w-6xl">
+        <Carousel 
+          ref={emblaRef} 
+          className="w-full max-w-6xl"
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 3000,
+            }),
+          ]}
+        >
           <CarouselContent>
             <CarouselItem>
               <div className="flex items-center justify-center cursor-pointer hover:opacity-95 transition-opacity" onClick={() => console.log('Cross-Punched Out Now clicked')}>
