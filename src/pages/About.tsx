@@ -1,4 +1,3 @@
-
 const About = () => {
   const teamImages = [
     "/lovable-uploads/e7270a84-1e9c-4678-b9a5-d78c2706f9c1.png",
@@ -36,6 +35,26 @@ const About = () => {
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
               </div>
             ))}
+          </div>
+
+          {/* Vision Section */}
+          <div className="mt-20 mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold mb-8" style={{ color: '#E91E63' }}>
+              Vision
+            </h2>
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-medium">
+              To make staying informed cool again—by turning knowledge into an adventure and sparking critical thinking in every curious Gen Z mind.
+            </p>
+          </div>
+
+          {/* Mission Section */}
+          <div className="mt-16">
+            <h2 className="text-5xl md:text-6xl font-bold mb-8" style={{ color: '#E91E63' }}>
+              Mission
+            </h2>
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-medium">
+              We design playful, interactive experiences that bridge the gap between current affairs, general knowledge, and Gen Z. Through games, events, content, and workshops, we make information engaging, accessible, and worth talking about.
+            </p>
           </div>
         </div>
       </div>
