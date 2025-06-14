@@ -4,13 +4,22 @@ import { Button } from "@/components/ui/button";
 const Home = () => {
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* Main Image Section */}
+      {/* Main Image Section with Buy Now Button */}
       <div className="relative min-h-[80vh] flex items-center justify-center">
         <img 
           src="/lovable-uploads/f2122894-dbf5-40fc-be08-e4fc8c335189.png" 
           alt="Cross-Punched Out Now! - Game boxes display" 
           className="max-w-full max-h-full object-contain"
         />
+        {/* Buy Now Button Overlay */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 md:bottom-16">
+          <Button 
+            className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 md:px-8 md:py-4 text-sm md:text-lg font-bold rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
+            onClick={() => console.log('Buy Now clicked')}
+          >
+            Buy Now
+          </Button>
+        </div>
       </div>
 
       {/* BINGO Section with Text */}
@@ -32,13 +41,22 @@ const Home = () => {
         </div>
       </div>
 
-      {/* New Third Image Section */}
-      <div className="bg-gray-100">
+      {/* Third Image Section with Know More Button */}
+      <div className="bg-gray-100 relative">
         <img 
           src="/lovable-uploads/1e6cc659-9907-4c87-a8dd-88516b12a1cb.png" 
           alt="Cross Out Boring Parties - Know More" 
           className="w-full h-auto block"
         />
+        {/* Know More Button Overlay */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 md:bottom-16">
+          <Button 
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 md:px-8 md:py-4 text-sm md:text-lg font-bold rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
+            onClick={() => console.log('Know More clicked')}
+          >
+            Know More
+          </Button>
+        </div>
       </div>
 
       {/* Back to Top Button */}
