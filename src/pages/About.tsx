@@ -88,7 +88,7 @@ const About = () => {
 
           {/* Our Recent Collaborators Section */}
           <div className="mt-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-gray-800">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent drop-shadow-sm">
               Our Recent Collaborators
             </h2>
             <div className="flex justify-center items-center gap-16 flex-wrap">
