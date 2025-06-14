@@ -2,9 +2,11 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ReviewsSection from "@/components/ReviewsSection";
+import { useState } from "react";
 
 const CrossPunched = () => {
   const navigate = useNavigate();
+  const [showText, setShowText] = useState(false);
 
   const handleImageClick = () => {
     // You can change this URL to wherever you want to redirect
@@ -15,6 +17,10 @@ const CrossPunched = () => {
   const handleBuyNow = () => {
     // Add your purchase logic here
     console.log('Buy Now clicked');
+  };
+
+  const handleBottomImageClick = () => {
+    setShowText(!showText);
   };
 
   return (
@@ -143,13 +149,45 @@ const CrossPunched = () => {
         </div>
       </div>
 
-      {/* New uploaded image section */}
-      <div className="w-full">
+      {/* Clickable image section with text overlay */}
+      <div className="w-full relative">
         <img 
           src="/lovable-uploads/756d9d4a-32ba-4319-8a53-d0d8571613b2.png" 
           alt="PYAAR, TAQRAAR AUR BINGO KA WAR! - Game Details" 
-          className="w-full h-auto block"
+          className="w-full h-auto block cursor-pointer hover:opacity-95 transition-opacity"
+          onClick={handleBottomImageClick}
         />
+        
+        {/* Animated text overlay */}
+        <div className={`absolute inset-0 bg-black/80 flex items-center justify-center transition-all duration-500 ${
+          showText ? 'opacity-100 visible' : 'opacity-0 invisible'
+        }`}>
+          <div className={`text-white text-center px-8 py-12 max-w-4xl mx-auto transform transition-all duration-700 ${
+            showText ? 'translate-y-0 scale-100' : 'translate-y-8 scale-95'
+          }`}>
+            <h3 className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-6 transition-all duration-700 delay-200 ${
+              showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
+              The Perfect Mix of Bonding and Fun
+            </h3>
+            <p className={`text-lg md:text-xl lg:text-2xl leading-relaxed transition-all duration-700 delay-400 ${
+              showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
+              The perfect mix of bonding and fun for all ages, making family getaways and gatherings more engaging. Wild cards let players mark extra words, swap choices, or double their chances of winning!
+            </p>
+            <div className={`mt-8 transition-all duration-700 delay-600 ${
+              showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
+              <Button 
+                onClick={handleBottomImageClick}
+                variant="outline"
+                className="bg-white/20 border-white/30 text-white hover:bg-white/30 hover:border-white/40"
+              >
+                Close
+              </Button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
