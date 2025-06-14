@@ -1,5 +1,7 @@
+
 import { Button } from "@/components/ui/button";
 import ReviewsSection from "@/components/ReviewsSection";
+import { Pen } from "lucide-react";
 
 const Timeline = () => {
   return (
@@ -83,6 +85,18 @@ const Timeline = () => {
 
       {/* Reviews Section */}
       <ReviewsSection />
+
+      {/* Write a review section */}
+      <div className="bg-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto">
+            <div className="flex items-center justify-between border-b-2 border-gray-800 pb-4">
+              <h2 className="text-4xl font-light text-gray-500">Write a review</h2>
+              <Pen className="w-8 h-8 text-gray-800" />
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Back to Top Button */}
       <button className="fixed bottom-8 right-8 w-12 h-12 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center text-white transition-colors">
