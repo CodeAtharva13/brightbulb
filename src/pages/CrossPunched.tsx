@@ -65,8 +65,39 @@ const CrossPunched = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
+      {/* Hero Section */}
+      <div className="bg-black text-white py-16 px-4">
+        <div className="container mx-auto">
+          <div className="flex flex-col lg:flex-row items-center gap-8">
+            <div className="flex-1 text-center lg:text-left">
+              <h1 className="text-4xl md:text-6xl font-bold mb-4 uppercase tracking-wider">
+                CROSS-PUNCHED
+              </h1>
+              <h2 className="text-2xl md:text-3xl font-semibold mb-8">
+                Not Your Typical<br />
+                <span className="text-white">BINGO</span>
+              </h2>
+            </div>
+            <div className="flex-1 flex justify-center">
+              <img 
+                src="/lovable-uploads/9e464011-7b8f-48ad-9123-680545351f47.png" 
+                alt="Cross-Punched Game"
+                className="max-w-full h-auto rounded-lg"
+              />
+            </div>
+          </div>
+          
+          {/* Centered Buy Now Button */}
+          <div className="text-center mt-12">
+            <Button className="bg-red-600 hover:bg-red-700 text-white px-12 py-4 text-lg font-bold rounded-lg shadow-lg">
+              Buy Now
+            </Button>
+          </div>
+        </div>
+      </div>
+
       {/* Sets Grid Section */}
-      <div className="py-16">
+      <div className="bg-white py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
             {triviaSets.map((set, index) => (
@@ -77,13 +108,6 @@ const CrossPunched = () => {
                 <h3 className="text-2xl font-bold text-white">{set.name}</h3>
               </div>
             ))}
-          </div>
-
-          {/* Buy Now Button */}
-          <div className="text-center mb-16">
-            <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg rounded-lg shadow-lg">
-              Buy Now
-            </Button>
           </div>
         </div>
       </div>
@@ -131,7 +155,7 @@ const CrossPunched = () => {
       </div>
 
       {/* Back to Top Button */}
-      <button className="fixed bottom-8 right-8 w-12 h-12 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center text-white transition-colors">
+      <button className="fixed bottom-8 right-8 w-12 h-12 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center text-white transition-colors z-50">
         <span className="text-xl">↑</span>
       </button>
     </div>
