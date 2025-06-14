@@ -1,13 +1,15 @@
 
+
 const Timeline = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-16">
       <div className="container mx-auto px-4">
-        <div className="max-w-full mx-auto flex items-center justify-center">
+        <div className="max-w-6xl mx-auto flex items-center justify-center">
           <img 
             src="/lovable-uploads/47875041-d299-4ff7-896d-b3f70703c97e.png" 
             alt="Bright Bulb Labs Timeline - Light Bulb Moment to Punched Up!" 
-            className="max-w-full h-auto"
+            className="w-full h-auto object-contain"
+            style={{ imageRendering: 'crisp-edges' }}
           />
         </div>
 
@@ -21,3 +23,4 @@ const Timeline = () => {
 };
 
 export default Timeline;
+
