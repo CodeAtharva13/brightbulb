@@ -95,24 +95,22 @@ const About = () => {
               {/* H❤H Logo */}
               <div className="transform hover:scale-110 transition-all duration-300 hover:shadow-lg">
                 <div className="bg-white/90 rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow duration-300">
-                  <div className="text-6xl font-bold text-black flex items-center justify-center">
-                    H
-                    <div className="mx-2 relative">
-                      <div className="w-8 h-8 bg-gradient-to-br from-pink-500 to-yellow-400 rounded-full border-2 border-black"></div>
-                      <div className="absolute inset-0 flex items-center justify-center text-white text-sm font-bold">❤</div>
-                    </div>
-                    H
-                  </div>
+                  <img
+                    src="/lovable-uploads/24bef4d9-497a-4787-ae3a-7a6555a325f6.png"
+                    alt="H❤H Logo"
+                    className="w-32 h-20 object-contain"
+                  />
                 </div>
               </div>
               
               {/* Om Symbol */}
               <div className="transform hover:scale-110 transition-all duration-300 hover:shadow-lg">
-                <div className="bg-white/90 rounded-full p-6 shadow-md hover:shadow-xl transition-shadow duration-300">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-orange-400 via-blue-500 to-teal-400 flex items-center justify-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-300 via-blue-400 to-teal-300 opacity-70"></div>
-                    <span className="relative text-white font-bold text-3xl drop-shadow-lg">ॐ</span>
-                  </div>
+                <div className="bg-white/90 rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow duration-300">
+                  <img
+                    src="/lovable-uploads/979a58f7-f73b-44c7-be37-8f5aebe21d87.png"
+                    alt="Om Symbol"
+                    className="w-20 h-20 object-contain"
+                  />
                 </div>
               </div>
             </div>
