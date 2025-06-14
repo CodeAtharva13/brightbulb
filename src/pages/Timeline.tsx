@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 
 const Timeline = () => {
   return (
@@ -21,9 +20,9 @@ const Timeline = () => {
         />
       </div>
 
-      {/* New images with hover zoom effect - all in one row */}
-      <div className="grid grid-cols-2 md:grid-cols-4 w-full">
-        <div className="overflow-hidden">
+      {/* New images with hover zoom effect */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+        <div className="overflow-hidden rounded-lg">
           <img 
             src="/lovable-uploads/4dbe2002-8be1-40d3-95ba-81c8627666dd.png" 
             alt="Event Photo 1" 
@@ -31,7 +30,7 @@ const Timeline = () => {
           />
         </div>
         
-        <div className="overflow-hidden">
+        <div className="overflow-hidden rounded-lg">
           <img 
             src="/lovable-uploads/2a150270-a70a-4376-b290-3179770a2f6c.png" 
             alt="Event Photo 2" 
@@ -39,7 +38,7 @@ const Timeline = () => {
           />
         </div>
         
-        <div className="overflow-hidden">
+        <div className="overflow-hidden rounded-lg">
           <img 
             src="/lovable-uploads/01507e52-28eb-4e10-a429-7ac6fa6e02e1.png" 
             alt="Event Photo 3" 
@@ -47,23 +46,13 @@ const Timeline = () => {
           />
         </div>
         
-        <div className="overflow-hidden">
+        <div className="overflow-hidden rounded-lg">
           <img 
             src="/lovable-uploads/c67322cd-0999-49be-a6e6-a402a01d5de1.png" 
             alt="Event Photo 4" 
             className="w-full h-auto block transition-transform duration-300 hover:scale-105"
           />
         </div>
-      </div>
-
-      {/* Subscribe Now Button */}
-      <div className="flex justify-center py-12">
-        <Button 
-          className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-          size="lg"
-        >
-          Subscribe Now
-        </Button>
       </div>
 
       {/* Back to Top Button */}
