@@ -66,7 +66,7 @@ const Home = () => {
       <div className="py-16 bg-white relative z-0">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            Not Your Typical <span className="text-red-600">BINGO!</span>
+            Not Your Typical <span className="animated-bingo">BINGO!</span>
           </h2>
           <p className="text-2xl font-semibold text-blue-600 mb-8">
             Try it Yourself!
