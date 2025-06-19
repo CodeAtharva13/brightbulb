@@ -73,27 +73,7 @@ const Home = () => {
           </p>
           
           {/* Flip Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto relative">
-            {/* "Flip to find out" text over first card */}
-            <div className="absolute -top-12 left-0 z-30 pointer-events-none">
-              <div className="relative">
-                <p className="text-pink-500 font-bold text-lg transform -rotate-12">
-                  Flip to find out
-                </p>
-                <svg 
-                  className="absolute -right-8 top-6 w-16 h-12 text-black"
-                  viewBox="0 0 100 50"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeDasharray="5,5"
-                >
-                  <path d="M10 25 Q 30 10, 50 25 T 85 35" />
-                  <path d="M75 30 L 85 35 L 80 40" fill="currentColor" stroke="none" />
-                </svg>
-              </div>
-            </div>
-
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {/* Buddhism Card */}
             <div className="flip-card w-full h-80">
               <div className="flip-card-inner w-full h-full relative preserve-3d transition-transform duration-600 hover:rotate-y-180">
