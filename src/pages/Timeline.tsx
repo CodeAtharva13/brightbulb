@@ -23,60 +23,20 @@ const Timeline = () => {
         />
       </div>
 
-      {/* Timeline Events Section */}
+      {/* Punched Up 2 Section */}
       <div className="bg-white py-12 px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            
-            {/* First Spotlight Event */}
-            <div className="text-center group cursor-pointer">
-              <h3 className="text-2xl font-bold text-red-600 mb-4">
-                First Spotlight Event: 11.11 Flea
-              </h3>
-              <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-300">
-                <p className="text-gray-700 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
-                  The debut event by Bright Bulb Labs, at the 11.11 Flea, introduces an immersive experience blending creativity, wit, and commerce.
-                </p>
-              </div>
-            </div>
-
-            {/* Punched Up */}
-            <div className="text-center group cursor-pointer">
-              <h3 className="text-2xl font-bold text-red-600 mb-4">
-                Punched Up!
-              </h3>
-              <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-300">
-                <p className="text-gray-700 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
-                  A clue-based bingo night, our very first event. With over 75 attendees and an incredible response, this marked the launch of our game — Cross Punched.
-                </p>
-              </div>
-            </div>
-
-            {/* Flea 11:11 */}
-            <div className="text-center group cursor-pointer">
-              <h3 className="text-2xl font-bold text-red-600 mb-4">
-                Flea 11:11
-              </h3>
-              <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-300">
-                <p className="text-gray-700 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
-                  The second showcase by Bright Bulb Labs at the 11.11 Flea showcased our flagship product Cross Punched through an immersive, witty,
-                </p>
-              </div>
-            </div>
-
-            {/* Punched Up 2 */}
-            <div className="text-center group cursor-pointer">
-              <h3 className="text-2xl font-bold text-red-600 mb-4">
-                Punched Up 2
-              </h3>
-              <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-300">
-                <p className="text-gray-700 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
-                  Punched Up made a comeback on 10th July at Hippie at Heart, Kothrud, a clue-cracking, pop culture-fuelled bingo night hosted by the sharp-witted Naman Jain.
-                </p>
-              </div>
-            </div>
-
-          </div>
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-6xl font-bold text-red-600 mb-8">
+            PUNCHED UP 2!
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Punched Up returned for its second edition on 10th July at Hippie at Heart, Kothrud, 
+            turning bingo into a clue-based, culture-cracking game night once again. Hosted by 
+            the quizmaster Naman Jain, and in collaboration with Mind Forge Quizzes. With pop 
+            culture clues spanning everything from politics to poetry, it was a fast-paced evening 
+            of brains, banter, and buzzing Gen Z energy — designed to make thinking fun and 
+            winning even better.
+          </p>
         </div>
       </div>
 
