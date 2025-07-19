@@ -16,11 +16,28 @@ const Timeline = () => {
 
       <div className="w-full">
         <img 
-          src="/lovable-uploads/820f797c-71cc-426a-aa59-a12f2d0cc1a2.png" 
-          alt="Punched Up! - Event description" 
+          src="/lovable-uploads/c133f418-03b6-474a-bacf-6c3ea861ed33.png" 
+          alt="Punched Up! - July 10, 8 PM, Hippie at heart, Kothrud" 
           className="w-full h-auto block"
           style={{ imageRendering: 'crisp-edges' }}
         />
+      </div>
+
+      {/* Punched Up 2 Section */}
+      <div className="bg-white py-12 px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-6xl font-bold text-red-600 mb-8">
+            PUNCHED UP 2!
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Punched Up returned for its second edition on 10th July at Hippie at Heart, Kothrud, 
+            turning bingo into a clue-based, culture-cracking game night once again. Hosted by 
+            the quizmaster Naman Jain, and in collaboration with Mind Forge Quizzes. With pop 
+            culture clues spanning everything from politics to poetry, it was a fast-paced evening 
+            of brains, banter, and buzzing Gen Z energy — designed to make thinking fun and 
+            winning even better.
+          </p>
+        </div>
       </div>
 
       {/* New images with hover zoom effect */}
