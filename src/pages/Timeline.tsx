@@ -44,7 +44,7 @@ const Timeline = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
         <div className="overflow-hidden rounded-lg">
           <img 
-            src="/lovable-uploads/4dbe2002-8be1-40d3-95ba-81c8627666dd.png" 
+            src="/lovable-uploads/2ab63637-e441-4506-a595-4ef1f65b82d3.png" 
             alt="Event Photo 1" 
             className="w-full h-auto block transition-transform duration-300 hover:scale-105"
           />
@@ -52,7 +52,7 @@ const Timeline = () => {
         
         <div className="overflow-hidden rounded-lg">
           <img 
-            src="/lovable-uploads/2a150270-a70a-4376-b290-3179770a2f6c.png" 
+            src="/lovable-uploads/3cfe7836-9c02-420c-a7be-a645585e52e6.png" 
             alt="Event Photo 2" 
             className="w-full h-auto block transition-transform duration-300 hover:scale-105"
           />
@@ -60,7 +60,7 @@ const Timeline = () => {
         
         <div className="overflow-hidden rounded-lg">
           <img 
-            src="/lovable-uploads/01507e52-28eb-4e10-a429-7ac6fa6e02e1.png" 
+            src="/lovable-uploads/743b1d76-33b5-4998-8877-c5079d91bc51.png" 
             alt="Event Photo 3" 
             className="w-full h-auto block transition-transform duration-300 hover:scale-105"
           />
@@ -68,7 +68,7 @@ const Timeline = () => {
         
         <div className="overflow-hidden rounded-lg">
           <img 
-            src="/lovable-uploads/c67322cd-0999-49be-a6e6-a402a01d5de1.png" 
+            src="/lovable-uploads/bddf3b1f-029d-4622-b9b7-a5b17ad0cc12.png" 
             alt="Event Photo 4" 
             className="w-full h-auto block transition-transform duration-300 hover:scale-105"
           />
