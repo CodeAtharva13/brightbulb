@@ -7,7 +7,7 @@ const Timeline = () => {
     <div className="min-h-screen bg-white">
       <div className="w-full">
         <img 
-          src="/lovable-uploads/47875041-d299-4ff7-896d-b3f70703c97e.png" 
+          src="/lovable-uploads/1172e698-dd67-4efc-aff2-859bcb81bd91.png" 
           alt="Bright Bulb Labs Timeline - Light Bulb Moment to Punched Up!" 
           className="w-full h-auto block"
           style={{ imageRendering: 'crisp-edges' }}
