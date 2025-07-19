@@ -29,43 +29,51 @@ const Timeline = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             
             {/* First Spotlight Event */}
-            <div className="text-center group">
-              <h3 className="text-2xl font-bold text-red-600 mb-4 cursor-pointer">
+            <div className="text-center group cursor-pointer">
+              <h3 className="text-2xl font-bold text-red-600 mb-4">
                 First Spotlight Event: 11.11 Flea
               </h3>
-              <p className="text-gray-700 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                The debut event by Bright Bulb Labs, at the 11.11 Flea, introduces an immersive experience blending creativity, wit, and commerce.
-              </p>
+              <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-300">
+                <p className="text-gray-700 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
+                  The debut event by Bright Bulb Labs, at the 11.11 Flea, introduces an immersive experience blending creativity, wit, and commerce.
+                </p>
+              </div>
             </div>
 
             {/* Punched Up */}
-            <div className="text-center group">
-              <h3 className="text-2xl font-bold text-red-600 mb-4 cursor-pointer">
+            <div className="text-center group cursor-pointer">
+              <h3 className="text-2xl font-bold text-red-600 mb-4">
                 Punched Up!
               </h3>
-              <p className="text-gray-700 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                A clue-based bingo night, our very first event. With over 75 attendees and an incredible response, this marked the launch of our game — Cross Punched.
-              </p>
+              <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-300">
+                <p className="text-gray-700 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
+                  A clue-based bingo night, our very first event. With over 75 attendees and an incredible response, this marked the launch of our game — Cross Punched.
+                </p>
+              </div>
             </div>
 
             {/* Flea 11:11 */}
-            <div className="text-center group">
-              <h3 className="text-2xl font-bold text-red-600 mb-4 cursor-pointer">
+            <div className="text-center group cursor-pointer">
+              <h3 className="text-2xl font-bold text-red-600 mb-4">
                 Flea 11:11
               </h3>
-              <p className="text-gray-700 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                The second showcase by Bright Bulb Labs at the 11.11 Flea showcased our flagship product Cross Punched through an immersive, witty,
-              </p>
+              <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-300">
+                <p className="text-gray-700 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
+                  The second showcase by Bright Bulb Labs at the 11.11 Flea showcased our flagship product Cross Punched through an immersive, witty,
+                </p>
+              </div>
             </div>
 
             {/* Punched Up 2 */}
-            <div className="text-center group">
-              <h3 className="text-2xl font-bold text-red-600 mb-4 cursor-pointer">
+            <div className="text-center group cursor-pointer">
+              <h3 className="text-2xl font-bold text-red-600 mb-4">
                 Punched Up 2
               </h3>
-              <p className="text-gray-700 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                Punched Up made a comeback on 10th July at Hippie at Heart, Kothrud, a clue-cracking, pop culture-fuelled bingo night hosted by the sharp-witted Naman Jain.
-              </p>
+              <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-300">
+                <p className="text-gray-700 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
+                  Punched Up made a comeback on 10th July at Hippie at Heart, Kothrud, a clue-cracking, pop culture-fuelled bingo night hosted by the sharp-witted Naman Jain.
+                </p>
+              </div>
             </div>
 
           </div>
