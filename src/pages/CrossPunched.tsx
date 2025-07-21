@@ -12,14 +12,11 @@ const CrossPunched = () => {
   const [showDecodeText, setShowDecodeText] = useState(false);
 
   const handleImageClick = () => {
-    // You can change this URL to wherever you want to redirect
-    window.open('https://example.com', '_blank');
-    // Or use navigate('/some-route') for internal routing
+    window.open('https://www.instagram.com/brightbulblabs.in?igsh=ZHUxOGt5NWhqMjNm', '_blank');
   };
 
   const handleBuyNow = () => {
-    // Add your purchase logic here
-    console.log('Buy Now clicked');
+    window.open('https://www.instagram.com/brightbulblabs.in?igsh=ZHUxOGt5NWhqMjNm', '_blank');
   };
 
   const handleBottomImageClick = () => {
