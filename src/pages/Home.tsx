@@ -32,7 +32,7 @@ const Home = () => {
         >
           <CarouselContent>
             <CarouselItem>
-              <div className="flex items-center justify-center w-full cursor-pointer hover:opacity-95 transition-opacity" onClick={() => console.log('Cross-Punched Out Now clicked')}>
+              <div className="flex items-center justify-center w-full cursor-pointer hover:opacity-95 transition-opacity" onClick={() => window.open('https://www.instagram.com/brightbulblabs.in?igsh=ZHUxOGt5NWhqMjNm', '_blank')}>
                 <img 
                   src="/lovable-uploads/c3718adf-d182-40f7-ab60-523af46fb0e1.png" 
                   alt="Cross-Punched Out Now! - Game boxes display" 
