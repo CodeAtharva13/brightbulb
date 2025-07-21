@@ -78,7 +78,7 @@ const Header = () => {
               />
             </a>
             <a 
-              href="https://wa.me/1234567890" 
+              href="https://wa.me/919561000991" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="hover:opacity-80 transition-opacity"
@@ -90,7 +90,7 @@ const Header = () => {
               />
             </a>
             <a 
-              href="https://linkedin.com/company/brightbulblabs" 
+              href="https://www.linkedin.com/company/bright-bulb-labs/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="hover:opacity-80 transition-opacity"
