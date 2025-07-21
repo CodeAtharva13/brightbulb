@@ -6,45 +6,45 @@ const ReviewsSection = () => {
   const reviews = [
     {
       id: 1,
-      name: "Sarah Johnson",
+      name: "Priya Sharma",
       rating: 5,
-      text: "Amazing game! Cross-Punched is so much more fun than regular BINGO. The trivia questions are challenging and entertaining!",
-      avatar: "SJ"
+      text: "Absolutely loved playing Cross-Punched with my family! The game brought us all together and we had so much fun. Perfect for bonding time.",
+      avatar: "PS"
     },
     {
       id: 2,
-      name: "Mike Chen",
+      name: "Rahul Patel",
       rating: 5,
-      text: "Bought this for family game night and it was a huge hit! Everyone from kids to grandparents had a blast.",
-      avatar: "MC"
+      text: "Bought this for my daughter's birthday party and it was a massive hit! All the kids were engaged and having a blast.",
+      avatar: "RP"
     },
     {
       id: 3,
-      name: "Emma Rodriguez",
+      name: "Anita Desai",
       rating: 5,
-      text: "Perfect for parties! The cross-punched format adds such a unique twist. Highly recommend!",
-      avatar: "ER"
+      text: "What a refreshing twist on traditional games! Cross-Punched kept everyone entertained for hours. Highly recommend for family gatherings.",
+      avatar: "AD"
     },
     {
       id: 4,
-      name: "David Thompson",
+      name: "Vikram Singh",
       rating: 5,
-      text: "Incredible game design! The combination of BINGO and trivia is genius. Can't wait to play again!",
-      avatar: "DT"
+      text: "Great quality and amazing concept! We played during our weekend getaway and it made the trip so much more fun.",
+      avatar: "VS"
     },
     {
       id: 5,
-      name: "Lisa Park",
+      name: "Meera Iyer",
       rating: 5,
-      text: "Best purchase I've made in a while! Hours of entertainment and learning rolled into one game.",
-      avatar: "LP"
+      text: "Fast delivery and excellent packaging! The game exceeded our expectations. Perfect for bringing people together.",
+      avatar: "MI"
     },
     {
       id: 6,
-      name: "James Wilson",
+      name: "Arjun Kapoor",
       rating: 5,
-      text: "Outstanding quality and so much fun! The trivia questions are well-researched and engaging.",
-      avatar: "JW"
+      text: "Innovative game design! We've played multiple rounds and it never gets boring. Great for parties and family time.",
+      avatar: "AK"
     }
   ];
 
