@@ -1,58 +1,65 @@
 
 import { useState, useEffect } from 'react';
+import { supabase } from '@/integrations/supabase/client';
 import WriteReviewSection from './WriteReviewSection';
 
+interface Review {
+  id: string;
+  name: string;
+  rating: number;
+  review_text: string;
+  created_at: string;
+}
+
 const ReviewsSection = () => {
-  const reviews = [
-    {
-      id: 1,
-      name: "Priya Sharma",
-      rating: 5,
-      text: "Absolutely loved playing Cross-Punched with my family! The game brought us all together and we had so much fun. Perfect for bonding time.",
-      avatar: "PS"
-    },
-    {
-      id: 2,
-      name: "Rahul Patel",
-      rating: 5,
-      text: "Bought this for my daughter's birthday party and it was a massive hit! All the kids were engaged and having a blast.",
-      avatar: "RP"
-    },
-    {
-      id: 3,
-      name: "Anita Desai",
-      rating: 5,
-      text: "What a refreshing twist on traditional games! Cross-Punched kept everyone entertained for hours. Highly recommend for family gatherings.",
-      avatar: "AD"
-    },
-    {
-      id: 4,
-      name: "Vikram Singh",
-      rating: 5,
-      text: "Great quality and amazing concept! We played during our weekend getaway and it made the trip so much more fun.",
-      avatar: "VS"
-    },
-    {
-      id: 5,
-      name: "Meera Iyer",
-      rating: 5,
-      text: "Fast delivery and excellent packaging! The game exceeded our expectations. Perfect for bringing people together.",
-      avatar: "MI"
-    },
-    {
-      id: 6,
-      name: "Arjun Kapoor",
-      rating: 5,
-      text: "Innovative game design! We've played multiple rounds and it never gets boring. Great for parties and family time.",
-      avatar: "AK"
-    }
-  ];
+  const [reviews, setReviews] = useState<Review[]>([]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(1); // 1 for forward, -1 for backward
   const [isAnimating, setIsAnimating] = useState(false);
 
+  // Fetch reviews from database
   useEffect(() => {
+    const fetchReviews = async () => {
+      const { data, error } = await supabase
+        .from('reviews')
+        .select('*')
+        .order('created_at', { ascending: false });
+      
+      if (error) {
+        console.error('Error fetching reviews:', error);
+      } else {
+        setReviews(data || []);
+      }
+    };
+
+    fetchReviews();
+
+    // Set up real-time subscription
+    const channel = supabase
+      .channel('schema-db-changes')
+      .on(
+        'postgres_changes',
+        {
+          event: 'INSERT',
+          schema: 'public',
+          table: 'reviews'
+        },
+        (payload) => {
+          setReviews(prev => [payload.new as Review, ...prev]);
+        }
+      )
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
+  }, []);
+
+  // Auto-scroll effect
+  useEffect(() => {
+    if (reviews.length <= 3) return;
+
     const interval = setInterval(() => {
       setIsAnimating(true);
       
@@ -80,12 +87,19 @@ const ReviewsSection = () => {
   }, [direction, reviews.length]);
 
   const getVisibleReviews = () => {
+    if (reviews.length === 0) return [];
+    if (reviews.length <= 3) return reviews;
+    
     const visibleReviews = [];
     for (let i = 0; i < 3; i++) {
       const index = (currentIndex + i) % reviews.length;
       visibleReviews.push(reviews[index]);
     }
     return visibleReviews;
+  };
+
+  const getInitials = (name: string) => {
+    return name.split(' ').map(n => n[0]).join('').toUpperCase();
   };
 
   const renderStars = (rating: number) => {
@@ -112,7 +126,7 @@ const ReviewsSection = () => {
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                    {review.avatar}
+                    {getInitials(review.name)}
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800">{review.name}</h3>
@@ -120,7 +134,7 @@ const ReviewsSection = () => {
                   </div>
                 </div>
                 <p className="text-gray-600 leading-relaxed italic">
-                  "{review.text}"
+                  "{review.review_text}"
                 </p>
               </div>
             ))}
@@ -128,31 +142,42 @@ const ReviewsSection = () => {
         </div>
 
         {/* Progress indicator */}
-        <div className="flex justify-center mt-8 space-x-2">
-          {reviews.map((_, index) => (
-            <div
-              key={index}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index >= currentIndex && index < currentIndex + 3
-                  ? 'bg-blue-500'
-                  : 'bg-gray-300'
-              }`}
-            />
-          ))}
-        </div>
+        {reviews.length > 3 && (
+          <div className="flex justify-center mt-8 space-x-2">
+            {reviews.map((_, index) => (
+              <div
+                key={index}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index >= currentIndex && index < currentIndex + 3
+                    ? 'bg-blue-500'
+                    : 'bg-gray-300'
+                }`}
+              />
+            ))}
+          </div>
+        )}
 
         {/* Direction indicator */}
-        <div className="flex justify-center mt-4">
-          <div className="flex items-center space-x-2 text-sm text-gray-500">
-            <span className={`transition-all duration-300 ${direction === 1 ? 'text-blue-500' : ''}`}>
-              →
-            </span>
-            <span>Auto-scrolling</span>
-            <span className={`transition-all duration-300 ${direction === -1 ? 'text-blue-500' : ''}`}>
-              ←
-            </span>
+        {reviews.length > 3 && (
+          <div className="flex justify-center mt-4">
+            <div className="flex items-center space-x-2 text-sm text-gray-500">
+              <span className={`transition-all duration-300 ${direction === 1 ? 'text-blue-500' : ''}`}>
+                →
+              </span>
+              <span>Auto-scrolling</span>
+              <span className={`transition-all duration-300 ${direction === -1 ? 'text-blue-500' : ''}`}>
+                ←
+              </span>
+            </div>
           </div>
-        </div>
+        )}
+
+        {/* Show message when no reviews */}
+        {reviews.length === 0 && (
+          <div className="text-center py-8">
+            <p className="text-gray-500">No reviews yet. Be the first to write one!</p>
+          </div>
+        )}
 
         {/* Write a Review Section */}
         <WriteReviewSection />

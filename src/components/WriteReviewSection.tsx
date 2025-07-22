@@ -5,21 +5,55 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
+import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/hooks/use-toast';
 
 const WriteReviewSection = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [rating, setRating] = useState(5);
   const [name, setName] = useState('');
   const [review, setReview] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Review submitted:', { name, rating, review });
-    // Here you would normally submit to your backend
-    setIsOpen(false);
-    setName('');
-    setReview('');
-    setRating(5);
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase
+        .from('reviews')
+        .insert([
+          {
+            name: name.trim(),
+            rating,
+            review_text: review.trim()
+          }
+        ]);
+
+      if (error) {
+        throw error;
+      }
+
+      toast({
+        title: "Review submitted!",
+        description: "Thank you for your feedback. Your review has been posted.",
+      });
+
+      setIsOpen(false);
+      setName('');
+      setReview('');
+      setRating(5);
+    } catch (error) {
+      console.error('Error submitting review:', error);
+      toast({
+        title: "Error",
+        description: "Failed to submit review. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const renderStars = (currentRating: number, interactive = false) => {
@@ -89,8 +123,12 @@ const WriteReviewSection = () => {
               />
             </div>
             
-            <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
-              Submit Review
+            <Button 
+              type="submit" 
+              className="w-full bg-blue-600 hover:bg-blue-700"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Submitting...' : 'Submit Review'}
             </Button>
           </form>
         </DialogContent>
