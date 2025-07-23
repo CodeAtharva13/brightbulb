@@ -31,10 +31,9 @@ const Contact = () => {
       const response = await fetch(APPS_SCRIPT_URL, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'text/plain',
         },
-        body: JSON.stringify(formData),
-        mode: 'cors'
+        body: JSON.stringify(formData)
       });
 
       const result = await response.json();
