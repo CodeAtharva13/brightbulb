@@ -19,21 +19,6 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    
-    // Create a Google Sheets URL with pre-filled data
-    const baseUrl = 'https://docs.google.com/spreadsheets/create';
-    const sheetData = `Phone: ${formData.phone}\nSubject: ${formData.subject}\nMessage: ${formData.message}\nTimestamp: ${new Date().toLocaleString()}`;
-    
-    // Copy data to clipboard for easy pasting
-    navigator.clipboard.writeText(sheetData).then(() => {
-      console.log('Data copied to clipboard');
-    });
-    
-    // Open Google Sheets
-    window.open(baseUrl, '_blank');
-    
-    // Show user that data is copied
-    alert('Form data copied to clipboard! Paste it in the Google Sheet that just opened.');
   };
 
   return (
