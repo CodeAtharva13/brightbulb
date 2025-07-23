@@ -12,7 +12,7 @@ const Contact = () => {
   const [submitStatus, setSubmitStatus] = useState<{type: 'success' | 'error', message: string} | null>(null);
 
   // Replace this URL with your actual Google Apps Script Web App URL
-  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbziZKbXehZsp77xw7x1NndQKqQNGQCuAUg4qjkAcPFayT1PbrB5pmPIX4-XGLrMnGHlKA/exec';
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
