@@ -19,6 +19,10 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
+    
+    // Open Google Sheets in a new tab
+    const googleSheetsUrl = 'https://docs.google.com/spreadsheets/create';
+    window.open(googleSheetsUrl, '_blank');
   };
 
   return (
