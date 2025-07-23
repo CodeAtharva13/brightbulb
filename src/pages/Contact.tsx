@@ -7,12 +7,6 @@ const Contact = () => {
     subject: '',
     message: ''
   });
-  
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{type: 'success' | 'error', message: string} | null>(null);
-
-  // Replace this URL with your actual Google Apps Script Web App URL
-  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbziZKbXehZsp77xw7x1NndQKqQNGQCuAUg4qjkAcPFayT1PbrB5pmPIX4-XGLrMnGHlKA/exec';
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -22,34 +16,9 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
-
-    try {
-      const response = await fetch(APPS_SCRIPT_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'text/plain',
-        },
-        body: JSON.stringify(formData)
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        setSubmitStatus({ type: 'success', message: 'Thank you! Your message has been sent successfully.' });
-        setFormData({ phone: '', subject: '', message: '' }); // Reset form
-      } else {
-        setSubmitStatus({ type: 'error', message: result.message || 'Something went wrong. Please try again.' });
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setSubmitStatus({ type: 'error', message: 'Network error. Please check your connection and try again.' });
-    } finally {
-      setIsSubmitting(false);
-    }
+    console.log('Form submitted:', formData);
   };
 
   return (
@@ -105,25 +74,13 @@ const Contact = () => {
             />
           </div>
 
-          {/* Status Message */}
-          {submitStatus && (
-            <div className={`p-4 rounded-2xl text-center font-medium ${
-              submitStatus.type === 'success' 
-                ? 'bg-green-100 text-green-800 border-2 border-green-300' 
-                : 'bg-red-100 text-red-800 border-2 border-red-300'
-            }`}>
-              {submitStatus.message}
-            </div>
-          )}
-
           {/* Submit Button */}
           <div className="pt-2">
             <Button
               type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-blue-500 hover:bg-blue-600 disabled:bg-gray-400 disabled:cursor-not-allowed text-white py-4 text-xl rounded-2xl shadow-lg font-semibold transition-all duration-200 transform hover:scale-[1.02] disabled:transform-none"
+              className="w-full bg-blue-500 hover:bg-blue-600 text-white py-4 text-xl rounded-2xl shadow-lg font-semibold transition-all duration-200 transform hover:scale-[1.02]"
             >
-              {isSubmitting ? 'Sending...' : 'Submit'}
+              Submit
             </Button>
           </div>
         </form>
